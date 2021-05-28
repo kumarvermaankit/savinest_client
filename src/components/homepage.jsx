@@ -275,12 +275,12 @@ return(
     
         <h3>Add Expense</h3>
         <div className="expensediv">
-        <input type="number" className="expense_input" name="food" val={expense.food} onChange={(event)=>OnChange(event)} placeholder="food expense"/>
-        <input type="number"  className="expense_input" name="travel" val={expense.travel} onChange={(event)=>OnChange(event)} placeholder="travel expense"/>
-        <input type="number" className="expense_input" name="health" val={expense.health}  onChange={(event)=>OnChange(event)}  placeholder="health expense"/>
-        <input type="number" className="expense_input" name="education" val={expense.education} onChange={(event)=>OnChange(event)}  placeholder="education expense"/>
-        <input type="number" className="expense_input" name="loan"  val={expense.loan} onChange={(event)=>OnChange(event)} placeholder="loan expense"/>
-        <input type="number" className="expense_input" name="others"  val={expense.others} onChange={(event)=>OnChange(event)}  placeholder="other expenses"/>
+        <input type="number" className="expense_input" name="food" value={expense.food} onChange={(event)=>OnChange(event)} placeholder="food expense"/>
+        <input type="number"  className="expense_input" name="travel" value={expense.travel} onChange={(event)=>OnChange(event)} placeholder="travel expense"/>
+        <input type="number" className="expense_input" name="health" value={expense.health}  onChange={(event)=>OnChange(event)}  placeholder="health expense"/>
+        <input type="number" className="expense_input" name="education" value={expense.education} onChange={(event)=>OnChange(event)}  placeholder="education expense"/>
+        <input type="number" className="expense_input" name="loan"  value={expense.loan} onChange={(event)=>OnChange(event)} placeholder="loan expense"/>
+        <input type="number" className="expense_input" name="others"  value={expense.others} onChange={(event)=>OnChange(event)}  placeholder="other expenses"/>
         <button className="add" onClick={(event)=>addExpense(event)}>Add</button>
         </div>
    
