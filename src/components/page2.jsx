@@ -77,11 +77,11 @@ function Page2(){
             </div>
         </div>:null}
         {main==="EMI Calculator"?<div className="maincard a">
-        <a className="frame" name="right_side" href="http://getemi.herokuapp.com/" target="_blank"  
+        <a className="frame" style={{width:"50px",height:'50px'}} name="right_side" href="http://getemi.herokuapp.com/" target="_blank"  
         >EMI Calculator</a>
         </div>:null}
         {main==="News"?<div className="maincard a">
-        <a className="frame" name="right_side" href="https://finnnews.herokuapp.com/" target="_blank"
+        <a className="frame" style={{width:"50px",height:'50px'}} name="right_side" href="http://dakshdudeja.pythonanywhere.com/" target="_blank"
          frameBorder="0">News</a>
         </div>:null}
       {main==="Coming Soon"?<div className="maincard a">
