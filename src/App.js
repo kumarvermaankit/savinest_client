@@ -11,7 +11,7 @@ let socket
 function App() {
 
   
-  const ENDPOINT="https://savinest.herokuapp.com" 
+  const ENDPOINT="https://savinest.herokuapp.com/" 
   
 
   
