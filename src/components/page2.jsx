@@ -10,7 +10,7 @@ function Page2(){
     const [tindex,settindex]=useState(1)
     const [frindex,setfrindex]=useState(2)
     
-    const [arr,setarr]=useState(["EMI Calculator","News","fourth"])
+    const [arr,setarr]=useState(["EMI Calculator","News","Coming Soon"])
     
     const [i,seti]=useState(0)
     function Change(event,val){
@@ -25,7 +25,7 @@ function Page2(){
         else if(main==="News"){
             settindex(i)
         }
-        else if(main==="fourth"){
+        else if(main==="Coming Soon"){
             setfrindex(i)
         }
         event.preventDefault()
@@ -45,7 +45,7 @@ function Page2(){
              
                     return(
                   <div>      
-                  {/* {  each==="Income Tax Calculator"?t=findex:each==="EMI Calculator"?t=sindex:each==="News"?t=tindex:each==="fourth"?t=frindex:null} */}
+                  {/* {  each==="Income Tax Calculator"?t=findex:each==="EMI Calculator"?t=sindex:each==="News"?t=tindex:each==="Coming Soon"?t=frindex:null} */}
                  
                 <SmallCard main={main} i={each} Change={(event)=>Change(event,each)} val={each}/>
                     </div>
@@ -77,20 +77,20 @@ function Page2(){
             </div>
         </div>:null}
         {main==="EMI Calculator"?<div className="maincard a">
-        <iframe className="frame" name="right_side" src="http://getemi.herokuapp.com/" width="100%"  
-        height="500px" frameBorder="0"></iframe>
+        <a className="frame" name="right_side" href="http://getemi.herokuapp.com/"  
+        >EMI Calculator</a>
         </div>:null}
         {main==="News"?<div className="maincard a">
-        <iframe className="frame" name="right_side" src="https://finnnews.herokuapp.com/" width="100%"  
-        height="500px" frameBorder="0"></iframe>
+        <a className="frame" name="right_side" href="https://finnnews.herokuapp.com/" 
+         frameBorder="0">News</a>
         </div>:null}
-      {main==="fourth"?<div className="maincard a">
-            Fourth
+      {main==="Coming Soon"?<div className="maincard a">
+          Coming Soon
         </div>:null}
         {/* {main!=="Income Tax Calculator"?<SmallCard main={main}  Change={(event)=>Change(event,"Income Tax Calculator",findex)}  val="Income Tax Calculator"/>:null}
         {main!=="EMI Calculator"?<SmallCard main={main} Change={(event)=>Change(event,"EMI Calculator",sindex)} val="EMI Calculator"/>:null}
         {main!=="News"?<SmallCard main={main} Change={(event)=>Change(event,"News",tindex)} val="News"/>:null}
-        {main!=="fourth"?<SmallCard main={main} Change={(event)=>Change(event,"fourth",frindex)} val="Fourth"/>:null} */}
+        {main!=="Coming Soon"?<SmallCard main={main} Change={(event)=>Change(event,"Coming Soon",frindex)} val="Coming Soon"/>:null} */}
       {cards()}
         </div>
     )

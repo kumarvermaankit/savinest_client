@@ -14,7 +14,7 @@ function Page5(props){
         others:0
     })
     
-    const [arr,setarr]=useState(["Delete","third","fourth"])
+    const [arr,setarr]=useState(["Delete","Coming Soon","Coming soon"])
     
 
 
@@ -56,7 +56,7 @@ function Page5(props){
              
                     return(
                   <div>      
-                  {/* {  each==="Delete"?t=findex:each==="Set Expense Limits"?t=sindex:each==="third"?t=tindex:each==="fourth"?t=frindex:null} */}
+                  {/* {  each==="Delete"?t=findex:each==="Set Expense Limits"?t=sindex:each==="Coming Soon"?t=tindex:each==="Coming Soon"?t=frindex:null} */}
                  
                 <SmallCard main={main} i={each} Change={(event)=>Change(event,each)} val={each}/>
                     </div>
@@ -140,16 +140,16 @@ function Page5(props){
         </div>
         <button onClick={SaveLimit}>Save</button>
         </div>:null}
-        {main==="third"?<div className="maincard a">
-            Third
+        {main==="Coming Soon"?<div className="maincard a">
+            Coming Soon
         </div>:null}
-      {main==="fourth"?<div className="maincard a">
-            Fourth
+      {main==="Coming soon"?<div className="maincard a">
+            Coming Soon
         </div>:null}
         {/* {main!=="Delete"?<SmallCard main={main}  Change={(event)=>Change(event,"Delete",findex)}  val="Delete"/>:null}
         {main!=="Set Expense Limits"?<SmallCard main={main} Change={(event)=>Change(event,"Set Expense Limits",sindex)} val="Set Expense Limits"/>:null}
-        {main!=="third"?<SmallCard main={main} Change={(event)=>Change(event,"third",tindex)} val="Third"/>:null}
-        {main!=="fourth"?<SmallCard main={main} Change={(event)=>Change(event,"fourth",frindex)} val="Fourth"/>:null} */}
+        {main!=="Coming Soon"?<SmallCard main={main} Change={(event)=>Change(event,"Coming Soon",tindex)} val="Coming Soon"/>:null}
+        {main!=="Coming Soon"?<SmallCard main={main} Change={(event)=>Change(event,"Coming Soon",frindex)} val="Coming Soon"/>:null} */}
       {cards()}
         </div>
     )
