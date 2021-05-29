@@ -308,7 +308,7 @@ function Page4(){
 </div>
         </div>:null}
       {main==="fourth"?<div className="maincard a">
-            Fourth
+            Coming Soon
         </div>:null}
         {/* {main!=="Real Estate"?<SmallCard main={main}  Change={(event)=>Change(event,"Real Estate",findex)}  val="Real Estate"/>:null}
         {main!=="Stock"?<SmallCard main={main} Change={(event)=>Change(event,"Stock",sindex)} val="Stock"/>:null}

@@ -254,3 +254,22 @@ body {
   position: absolute;
   left: 290px;
 }
+
+.iadd {
+  padding-left: 10px;
+  width: 250px;
+  position: absolute;
+  left: 100px;
+}
+
+.expense_label {
+  font-size: 20px;
+  position: relative;
+  right: 100px;
+}
+
+.frame {
+  font-size: 60px;
+  position: relative;
+  top: 200px;
+}

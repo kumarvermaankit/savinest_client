@@ -275,12 +275,40 @@ return(
     
         <h3>Add Expense</h3>
         <div className="expensediv">
-        <input type="number" className="expense_input" name="food" value={expense.food} onChange={(event)=>OnChange(event)} placeholder="food expense"/>
+        {/* <input type="number" className="expense_input" name="food" value={expense.food} onChange={(event)=>OnChange(event)} placeholder="food expense"/>
         <input type="number"  className="expense_input" name="travel" value={expense.travel} onChange={(event)=>OnChange(event)} placeholder="travel expense"/>
         <input type="number" className="expense_input" name="health" value={expense.health}  onChange={(event)=>OnChange(event)}  placeholder="health expense"/>
         <input type="number" className="expense_input" name="education" value={expense.education} onChange={(event)=>OnChange(event)}  placeholder="education expense"/>
         <input type="number" className="expense_input" name="loan"  value={expense.loan} onChange={(event)=>OnChange(event)} placeholder="loan expense"/>
-        <input type="number" className="expense_input" name="others"  value={expense.others} onChange={(event)=>OnChange(event)}  placeholder="other expenses"/>
+        <input type="number" className="expense_input" name="others"  value={expense.others} onChange={(event)=>OnChange(event)}  placeholder="other expenses"/> */}
+        <div className="limit_div">
+        <div style={{display:"flex"}}>
+            <label for="food" className="expense_label"> Food: </label>
+            
+            <input type="number" name="food"  className="iadd" value={(expense.food)}  placeholder="in Rs" onChange={(event)=>OnChange(event)} />
+        </div>
+        <div style={{display:"flex"}}>
+            <label for="travel" className="expense_label">travel:</label>
+            <input type="number" name="travel"  className="iadd" value={(expense.travel)} placeholder="in Rs" onChange={(event)=>OnChange(event)} />
+        </div>
+        <div style={{display:"flex"}}>
+            <label for="health" className="expense_label">health:</label>
+            <input type="number" name="health"  className="iadd" value={(expense.health)} placeholder="in Rs" onChange={(event)=>OnChange(event)} />
+        </div>
+        <div style={{display:"flex"}}>
+            <label for="education" className="expense_label">education:</label>
+            <input type="number" name="education" className="iadd" value={(expense.education)} placeholder="in Rs" onChange={(event)=>OnChange(event)} />
+        </div>
+        <div style={{display:"flex"}}>
+            <label for="loan" className="expense_label">loan:</label>
+            <input type="number" name="loan"  className="iadd" value={(expense.loan)} placeholder="in Rs" onChange={(event)=>OnChange(event)} />
+        </div>
+        <div style={{display:"flex"}}>
+            <label for="others" className="expense_label">Others:</label>
+            <input type="number" name="others"  className="iadd" value={(expense.others)} placeholder="in Rs" onChange={(event)=>OnChange(event)} />
+        </div>
+        </div>
+       
         <button className="add" onClick={(event)=>addExpense(event)}>Add</button>
         </div>
    
