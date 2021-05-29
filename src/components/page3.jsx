@@ -114,7 +114,7 @@ function Page3(){
     const [tindex,settindex]=useState(1)
     const [frindex,setfrindex]=useState(2)
     
-    const [arr,setarr]=useState(["Asset Allocation","Loan Consultation","Advice"])
+    const [arr,setarr]=useState(["Asset Allocation","Payment ","Chat with Expert"])
     
     const [i,seti]=useState(0)
     function Change(event,val){
@@ -126,10 +126,10 @@ function Page3(){
         else if(main==="Asset Allocation"){
             setsindex(i)
         }
-        else if(main==="Loan Consultation"){
+        else if(main==="Payment "){
             settindex(i)
         }
-        else if(main==="Advice"){
+        else if(main==="Chat with Expert"){
             setfrindex(i)
         }
         event.preventDefault()
@@ -149,7 +149,7 @@ function Page3(){
              
                     return(
                   <div>      
-                  {/* {  each==="Financial Planner"?t=findex:each==="Asset Allocation"?t=sindex:each==="Loan Consultation"?t=tindex:each==="Advice"?t=frindex:null} */}
+                  {/* {  each==="Financial Planner"?t=findex:each==="Asset Allocation"?t=sindex:each==="Payment "?t=tindex:each==="Chat with Expert"?t=frindex:null} */}
                  
                 <SmallCard main={main} i={each} Change={(event)=>Change(event,each)} val={each}/>
                     </div>
@@ -184,18 +184,18 @@ function Page3(){
         <iframe  name="right_side" src="https://forms.gle/T1ub782hCNKzKUuP9" width="100%"  
         height="500px" frameBorder="0"></iframe>
         </div>:null}
-        {main==="Loan Consultation"?<div className="maincard a">
+        {main==="Payment "?<div className="maincard a">
         <h3 style={{color:"white"}}>Remember to first book appointment before payment,also add your appointment name in description </h3>
        <Razorpay />
         </div>:null}
-      {main==="Advice"?<div className="maincard a">
+      {main==="Chat with Expert"?<div className="maincard a">
       <iframe  name="right_side" src="https://cyduckchat.netlify.app/" width="100%"  
         height="500px" frameBorder="0"></iframe>
         </div>:null}
         {/* {main!=="Financial Planner"?<SmallCard main={main}  Change={(event)=>Change(event,"Financial Planner",findex)}  val="Financial Planner"/>:null}
         {main!=="Asset Allocation"?<SmallCard main={main} Change={(event)=>Change(event,"Asset Allocation",sindex)} val="Second"/>:null}
-        {main!=="Loan Consultation"?<SmallCard main={main} Change={(event)=>Change(event,"Loan Consultation",tindex)} val="Loan Consultation"/>:null}
-        {main!=="Advice"?<SmallCard main={main} Change={(event)=>Change(event,"Advice",frindex)} val="Advice"/>:null} */}
+        {main!=="Payment "?<SmallCard main={main} Change={(event)=>Change(event,"Payment ",tindex)} val="Payment "/>:null}
+        {main!=="Chat with Expert"?<SmallCard main={main} Change={(event)=>Change(event,"Chat with Expert",frindex)} val="Chat with Expert"/>:null} */}
       {cards()}
         </div>
     )
