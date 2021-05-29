@@ -77,7 +77,7 @@ function offsetMenuBorder(element, menuBorder) {
             <path d="M20.2,12.1H3.8"/>
             <path d="M3.8,17.5h16.4"/>  */}
             <g font-size="5" stroke-width="0.2" >
-                <text x="0.9" y="9">Finance</text>
+                <text x="1.4" y="9">Finance</text>
                 <text x="2.2" y="15">Tracker</text>
             </g>
           </svg>
