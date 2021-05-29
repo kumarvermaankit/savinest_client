@@ -50,7 +50,7 @@ function Page4(){
     const [tindex,settindex]=useState(1)
     const [frindex,setfrindex]=useState(2)
     
-    const [arr,setarr]=useState(["Real Estate","Cryptocurrency","fourth"])
+    const [arr,setarr]=useState(["Real Estate","Cryptocurrency","Coming Soon"])
     
     const [i,seti]=useState(0)
     function Change(event,val){
@@ -65,7 +65,7 @@ function Page4(){
         else if(main==="Cryptocurrency"){
             settindex(i)
         }
-        else if(main==="fourth"){
+        else if(main==="Coming Soon"){
             setfrindex(i)
         }
         event.preventDefault()
@@ -85,7 +85,7 @@ function Page4(){
              
                     return(
                   <div>      
-                  {/* {  each==="Real Estate"?t=findex:each==="Stock"?t=sindex:each==="Cryptocurrency"?t=tindex:each==="fourth"?t=frindex:null} */}
+                  {/* {  each==="Real Estate"?t=findex:each==="Stock"?t=sindex:each==="Cryptocurrency"?t=tindex:each==="Coming Soon"?t=frindex:null} */}
                  
                 <SmallCard main={main} i={each} Change={(event)=>Change(event,each)} val={each}/>
                     </div>
@@ -307,13 +307,13 @@ function Page4(){
   </a>
 </div>
         </div>:null}
-      {main==="fourth"?<div className="maincard a">
+      {main==="Coming Soon"?<div className="maincard a">
             Coming Soon
         </div>:null}
         {/* {main!=="Real Estate"?<SmallCard main={main}  Change={(event)=>Change(event,"Real Estate",findex)}  val="Real Estate"/>:null}
         {main!=="Stock"?<SmallCard main={main} Change={(event)=>Change(event,"Stock",sindex)} val="Stock"/>:null}
         {main!=="Cryptocurrency"?<SmallCard main={main} Change={(event)=>Change(event,"Cryptocurrency",tindex)} val="Cryptocurrency"/>:null}
-        {main!=="fourth"?<SmallCard main={main} Change={(event)=>Change(event,"fourth",frindex)} val="Fourth"/>:null} */}
+        {main!=="Coming Soon"?<SmallCard main={main} Change={(event)=>Change(event,"Coming Soon",frindex)} val="Fourth"/>:null} */}
       {cards()}
         </div>
     )
