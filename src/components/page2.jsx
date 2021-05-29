@@ -70,7 +70,7 @@ function Page2(){
         <div className="container">
         {main==="Income Tax Calculator"?<div className="maincard a">
         <div >
-        <iframe className="frame" name="right_side" src="https://savinesttaxcalculator.netlify.app/" width="100%"  
+        <iframe  name="right_side" src="https://savinesttaxcalculator.netlify.app/" width="100%"  
         height="500px" frameBorder="0"></iframe>
 
         
