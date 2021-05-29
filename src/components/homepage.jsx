@@ -90,11 +90,11 @@ return(
 <p className="current_limit">{`Current Limit:${props.users[0].info.expenses.education.limit}`}</p>
 </div>
 <div className="itemexpense" style={{backgroundColor:"#867ae9"}}>
-<p className="total" >{`Education: Rs:${total.loan}`}</p>
+<p className="total" >{`Loan: Rs:${total.loan}`}</p>
 <p className="current_limit">{`Current Limit:${props.users[0].info.expenses.loan.limit}`}</p>
 </div>
 <div className="itemexpense" style={{backgroundColor:"#1eae98"}}>
-<p  className="total">{`Education: Rs:${total.others}`}</p>
+<p  className="total">{`Others: Rs:${total.others}`}</p>
 <p className="current_limit">{`Current Limit:${props.users[0].info.expenses.others.limit}`}</p>
 </div>
    
