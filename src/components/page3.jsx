@@ -20,10 +20,8 @@ function Page3(){
       
       
       
-        const[hndrd,sethndrd]=useState(false)
         const[two,settwo]=useState(false)
-        const[five,setfive]=useState(false)
-        const[ten,setten]=useState(false)
+        
       
       
       
@@ -98,10 +96,7 @@ function Page3(){
       
       return (
           <div className="Pdiv">
-           <div  className="carddiv" style={{marginLeft:"0"}}>
-             <button className="btn">Free</button>
-             <p id="free" className="idiv">Free! Free! Free!</p>
-           </div>
+          
         <Card  amount="100" state={two} hours="6"/>
         
       
