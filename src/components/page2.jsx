@@ -83,6 +83,7 @@ function Page2(){
         {main==="News"?<div className="maincard a">
         <a className="frame" style={{width:"50px",height:'50px'}} name="right_side" href="http://dakshdudeja.pythonanywhere.com/" target="_blank"
          frameBorder="0">News(Click Here)</a>
+         
         </div>:null}
       {main==="Coming Soon"?<div className="maincard a">
           Coming Soon

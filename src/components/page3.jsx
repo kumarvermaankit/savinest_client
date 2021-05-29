@@ -87,21 +87,8 @@ function Page3(){
         <img className="consult_img" src={i3}/>
         </div>:null}
       {main==="Advice"?<div className="maincard a">
-      <Typewriter
-  onInit={(typewriter) => {
-    typewriter.typeString('<h1 class="autowrite" >Are you spending too much?!</h1><br/>')
-    
-      .pauseFor(100)
-      typewriter.typeString('<h1 class="autowrite" >How to do savings!</h1><br/>')  
-      .pauseFor(100)
-      typewriter.typeString('<h1 class="autowrite" >How to invest and which investment will be most profitable for you!</h1><br/>')
-      .pauseFor(100)  
-      typewriter.typeString('<h1 class="autowrite" >Best possible investment paths!</h1><br/>')
-      .pauseFor(100) 
-      typewriter.typeString('<h1 class="autowrite" >Analysis of your data by Experts!</h1>')
-      .start();
-  }}
-/>
+      <iframe  name="right_side" src="https://cyduckchat.netlify.app/" width="100%"  
+        height="500px" frameBorder="0"></iframe>
         </div>:null}
         {/* {main!=="Financial Planner"?<SmallCard main={main}  Change={(event)=>Change(event,"Financial Planner",findex)}  val="Financial Planner"/>:null}
         {main!=="Asset Allocation"?<SmallCard main={main} Change={(event)=>Change(event,"Asset Allocation",sindex)} val="Second"/>:null}
