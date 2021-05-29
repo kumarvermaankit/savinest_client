@@ -21,6 +21,16 @@ body {
   left: 0px;
 }
 
+.carddiv {
+  margin-top: 150px;
+}
+
+.btn2 {
+  width: 150px;
+  height: 150px;
+  cursor: pointer;
+}
+
 .delete_btn {
   width: 200px;
   height: 100px;

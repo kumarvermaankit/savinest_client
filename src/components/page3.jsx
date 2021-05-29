@@ -83,13 +83,13 @@ function Page3(){
       <div className="carddiv"  >
             <button 
             onClick={()=>razorPayPaymentHandler(props.amount)}
-            className="btn "
+            className="btn2"
             
             >
                {props.amount} 
               
             </button>
-            <p className="idiv" id={props.hours}> For Rs {props.amount} {`->`} {props.hours} hours</p>
+            
             </div>
         )
       }
@@ -97,7 +97,7 @@ function Page3(){
       return (
           <div className="Pdiv">
           
-        <Card  amount="100" state={two} hours="6"/>
+        <Card  amount="100"/>
         
       
       
@@ -185,6 +185,7 @@ function Page3(){
         height="500px" frameBorder="0"></iframe>
         </div>:null}
         {main==="Loan Consultation"?<div className="maincard a">
+        <h3 style={{color:"white"}}>Remember to first book appointment before payment,also add your appointment name in description </h3>
        <Razorpay />
         </div>:null}
       {main==="Advice"?<div className="maincard a">
