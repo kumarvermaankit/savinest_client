@@ -47,7 +47,7 @@ return(
             <div className="form-group">
                 <label for="">Family Key</label>
                 <input type="text" id="family_id" className="form-control" required onChange={props.addfamily}/>
-                <button onClick={(event)=>Generate(event)}>Generate Id</button>
+                <button onClick={(event)=>Generate(event)} className="gen-control">Generate Id</button>
             </div>
             <input type="submit" className="btn " value="Login" />
         </form>

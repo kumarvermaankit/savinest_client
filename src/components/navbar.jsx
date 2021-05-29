@@ -7,7 +7,7 @@ function Navbar(props){
 
 
     var body ;
-var bgColorsBody = ["#ca7547", "#d18c68", "#b1856e", "#d3ac97", "#d3bbae"];
+var bgColorsBody = ["#DEB887", "#B0C4DE", "#B0E0E6", "#bdb76b", "#008b8b"];
 //arrays of the background color have been created
 var menu 
 var menuItems
@@ -89,8 +89,8 @@ function offsetMenuBorder(element, menuBorder) {
             C3.4,19.3,3,19,3,18.5v-5.6c0-0.1,0-0.2,0.1-0.3L6,5.3C6.1,5,6.4,4.8,6.7,4.8z"/>
             <path  d="M3.4,12.9H8l1.6,2.8h4.9l1.5-2.8h4.6"/>  */}
             <g font-size="5" stroke-width="0.2" >
-                <text x="0.8" y="9">Tax</text>
-                <text x="1.5" y="15">Calculator</text>
+                <text x="3.8" y="9">Tool</text>
+                
             </g>
           </svg>
         </button>

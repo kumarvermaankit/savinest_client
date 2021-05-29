@@ -6,11 +6,113 @@ import Typewriter from 'typewriter-effect';
 import i1 from "./consultation(2).png"
 import i2 from "./consultation(3).png"
 import i3 from "./consultation(4).png"
-
+import Axios from "axios"
 
 
 function Page3(){
 
+
+    function Razorpay(){
+
+        // const token = localStorage.usertoken
+        // const decoded=jwt_decode(token)
+      
+      
+      
+      
+        const[hndrd,sethndrd]=useState(false)
+        const[two,settwo]=useState(false)
+        const[five,setfive]=useState(false)
+        const[ten,setten]=useState(false)
+      
+      
+      
+      async function razorPayPaymentHandler(money) {
+      
+       var url="https://savinest.herokuapp.com/"
+    
+      
+          const API_URL = `${url}/payment/`
+          const orderUrl = `${API_URL}order/${money}`;
+          const response = await Axios.get(orderUrl);
+          const { data } = response;
+          
+          
+          const options = {
+            key: '',
+            name: "Example",
+            description: "This is a description",
+            order_id: data.id,
+            handler: async (response) => {
+              try {
+               const paymentId = response.razorpay_payment_id;
+               const url = `${API_URL}capture/${paymentId}/${money}`;
+               const captureResponse = await Axios.post(url, {})
+               const successObj = JSON.parse(captureResponse.data)
+               const captured = successObj.captured;
+               
+               
+               if(captured){
+                   console.log(successObj)
+                //    setquestion((prevvalue)=>{
+                //      return{
+                //        ...prevvalue,
+                //        paymentinfo:successObj
+                //      }
+                //    })
+                  
+                  }
+                 
+               } catch (err) {
+                console.log(err);
+              }
+            },
+            theme: {
+              color: "#686CFD",
+            },
+          };
+         
+          const rzp1 = new window.Razorpay(options);
+          rzp1.open();
+        }
+      
+      
+      
+      
+      
+      function Card(props){
+        return(
+      <div className="carddiv"  >
+            <button 
+            onClick={()=>razorPayPaymentHandler(props.amount)}
+            className="btn "
+            
+            >
+               {props.amount} 
+              
+            </button>
+            <p className="idiv" id={props.hours}> For Rs {props.amount} {`->`} {props.hours} hours</p>
+            </div>
+        )
+      }
+      
+      return (
+          <div className="Pdiv">
+           <div  className="carddiv" style={{marginLeft:"0"}}>
+             <button className="btn">Free</button>
+             <p id="free" className="idiv">Free! Free! Free!</p>
+           </div>
+        <Card  amount="100" state={two} hours="6"/>
+        
+      
+      
+        
+          </div>
+        )
+      }    
+
+
+    
     const [main,setmain]=useState("Financial Planner")
     const [findex,setfindex]=useState(3)
     const [sindex,setsindex]=useState(0)
@@ -77,14 +179,18 @@ function Page3(){
         <div className="container">
         {main==="Financial Planner"?<div className="maincard a">
         <div >
-  <img className="consult_img" src={i1}/>
+  {/* <img className="consult_img" src={i1}/> */}
+  <iframe  name="right_side" src="https://forms.gle/7HJwzwBiRMG9cX9j7" width="100%"  
+        height="500px" frameBorder="0"></iframe>
             </div>
         </div>:null}
         {main==="Asset Allocation"?<div className="maincard a">
-        <img className="consult_img" src={i2}/>
+        {/* <img className="consult_img" src={i2}/> */}
+        <iframe  name="right_side" src="https://forms.gle/T1ub782hCNKzKUuP9" width="100%"  
+        height="500px" frameBorder="0"></iframe>
         </div>:null}
         {main==="Loan Consultation"?<div className="maincard a">
-        <img className="consult_img" src={i3}/>
+       <Razorpay />
         </div>:null}
       {main==="Advice"?<div className="maincard a">
       <iframe  name="right_side" src="https://cyduckchat.netlify.app/" width="100%"  

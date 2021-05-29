@@ -77,8 +77,9 @@ function Page2(){
             </div>
         </div>:null}
         {main==="EMI Calculator"?<div className="maincard a">
-        <a className="frame" style={{width:"50px",height:'50px'}} name="right_side" href="http://getemi.herokuapp.com/" target="_blank"  
-        >EMI Calculator(Click Here)</a>
+   
+            <iframe  name="right_side" src="https://getemi.herokuapp.com/" width="100%"  
+        height="500px" frameBorder="0"></iframe>
         </div>:null}
         {main==="News"?<div className="maincard a">
         {/* <a className="frame" style={{width:"50px",height:'50px'}} name="right_side" href="http://dakshdudeja.pythonanywhere.com/" target="_blank"
