@@ -29,7 +29,7 @@ function Page3(){
       
       async function razorPayPaymentHandler(money) {
       
-       var url="https://savinest.herokuapp.com"
+       var url="https://savinestpayment.herokuapp.com"
     
       
           const API_URL = `${url}/payment/`
