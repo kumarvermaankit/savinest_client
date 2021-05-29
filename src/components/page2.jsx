@@ -10,7 +10,7 @@ function Page2(){
     const [tindex,settindex]=useState(1)
     const [frindex,setfrindex]=useState(2)
     
-    const [arr,setarr]=useState(["EMI Calculator","News","Coming Soon"])
+    const [arr,setarr]=useState(["EMI Calculator","News","Stock Prediction"])
     
     const [i,seti]=useState(0)
     function Change(event,val){
@@ -25,7 +25,7 @@ function Page2(){
         else if(main==="News"){
             settindex(i)
         }
-        else if(main==="Coming Soon"){
+        else if(main==="Stock Prediction"){
             setfrindex(i)
         }
         event.preventDefault()
@@ -45,7 +45,7 @@ function Page2(){
              
                     return(
                   <div>      
-                  {/* {  each==="Income Tax Calculator"?t=findex:each==="EMI Calculator"?t=sindex:each==="News"?t=tindex:each==="Coming Soon"?t=frindex:null} */}
+                  {/* {  each==="Income Tax Calculator"?t=findex:each==="EMI Calculator"?t=sindex:each==="News"?t=tindex:each==="Stock Prediction"?t=frindex:null} */}
                  
                 <SmallCard main={main} i={each} Change={(event)=>Change(event,each)} val={each}/>
                     </div>
@@ -87,13 +87,14 @@ function Page2(){
           <iframe  name="right_side" src="https://getnewss.herokuapp.com/" width="100%"  
         height="500px" frameBorder="0"></iframe>
         </div>:null}
-      {main==="Coming Soon"?<div className="maincard a">
-          Coming Soon
+      {main==="Stock Prediction"?<div className="maincard a">
+      <iframe  name="right_side" src="https://livestockprediction.herokuapp.com/project/stock/" width="100%"  
+        height="500px" frameBorder="0"></iframe>
         </div>:null}
         {/* {main!=="Income Tax Calculator"?<SmallCard main={main}  Change={(event)=>Change(event,"Income Tax Calculator",findex)}  val="Income Tax Calculator"/>:null}
         {main!=="EMI Calculator"?<SmallCard main={main} Change={(event)=>Change(event,"EMI Calculator",sindex)} val="EMI Calculator"/>:null}
         {main!=="News"?<SmallCard main={main} Change={(event)=>Change(event,"News",tindex)} val="News"/>:null}
-        {main!=="Coming Soon"?<SmallCard main={main} Change={(event)=>Change(event,"Coming Soon",frindex)} val="Coming Soon"/>:null} */}
+        {main!=="Stock Prediction"?<SmallCard main={main} Change={(event)=>Change(event,"Stock Prediction",frindex)} val="Stock Prediction"/>:null} */}
       {cards()}
         </div>
     )
