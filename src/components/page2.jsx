@@ -81,9 +81,10 @@ function Page2(){
         >EMI Calculator(Click Here)</a>
         </div>:null}
         {main==="News"?<div className="maincard a">
-        <a className="frame" style={{width:"50px",height:'50px'}} name="right_side" href="http://dakshdudeja.pythonanywhere.com/" target="_blank"
-         frameBorder="0">News(Click Here)</a>
-         
+        {/* <a className="frame" style={{width:"50px",height:'50px'}} name="right_side" href="http://dakshdudeja.pythonanywhere.com/" target="_blank"
+         frameBorder="0">News(Click Here)</a> */}
+          <iframe  name="right_side" src="https://getnewss.herokuapp.com/" width="100%"  
+        height="500px" frameBorder="0"></iframe>
         </div>:null}
       {main==="Coming Soon"?<div className="maincard a">
           Coming Soon
