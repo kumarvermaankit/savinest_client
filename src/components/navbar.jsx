@@ -77,7 +77,7 @@ function offsetMenuBorder(element, menuBorder) {
             <path d="M20.2,12.1H3.8"/>
             <path d="M3.8,17.5h16.4"/>  */}
             <g font-size="5" stroke-width="0.2" >
-                <text x="0.6" y="9">Finance</text>
+                <text x="0.9" y="9">Finance</text>
                 <text x="2.2" y="15">Tracker</text>
             </g>
           </svg>
@@ -89,7 +89,7 @@ function offsetMenuBorder(element, menuBorder) {
             C3.4,19.3,3,19,3,18.5v-5.6c0-0.1,0-0.2,0.1-0.3L6,5.3C6.1,5,6.4,4.8,6.7,4.8z"/>
             <path  d="M3.4,12.9H8l1.6,2.8h4.9l1.5-2.8h4.6"/>  */}
             <g font-size="5" stroke-width="0.2" >
-                <text x="5.8" y="12">Tool</text>
+                <text x="6.8" y="14">Tool</text>
                 
             </g>
           </svg>
@@ -113,7 +113,7 @@ function offsetMenuBorder(element, menuBorder) {
             <path  d="M4.2,9.3h15.6"/>
             <path  d="M9.1,9.5v10.3"/> */}
             <g font-size="5" stroke-width="0.2" >
-                <text x="3.8" y="12">Learn</text>
+                <text x="4.8" y="14">Learn</text>
             </g>
           </svg>
         </button>
